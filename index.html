@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>몽골의 간섭과 공민왕의 개혁</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인터랙티브 역사 학습: 몽골의 간섭과 공민왕의 개혁</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-primary">
+
+    <header id="header" class="bg-primary shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl md:text-2xl font-bold text-title">고려 역사 탐험 🗺️</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#section1" class="nav-link text-gray-600 hover:text-accent border-b-2 border-transparent pb-1">1. 힘센 짝꿍, 몽골</a>
+                    <a href="#section2" class="nav-link text-gray-600 hover:text-accent border-b-2 border-transparent pb-1">2. 짝꿍 편, 권문세족</a>
+                    <a href="#section3" class="nav-link text-gray-600 hover:text-accent border-b-2 border-transparent pb-1">3. 공민왕의 반격</a>
+                </div>
+                <div class="md:hidden">
+                    <select id="mobile-nav" class="bg-white border border-gray-300 rounded-md py-2 px-3 text-gray-700">
+                        <option value="#section1">1. 원 간섭기</option>
+                        <option value="#section2">2. 권문세족</option>
+                        <option value="#section3">3. 공민왕</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <section class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title mb-4">몽골의 간섭과 공민왕의 개혁</h2>
+            <p class="max-w-3xl mx-auto text-lg">고려 후기, 몽골(원)의 간섭으로 힘든 시기를 보냈던 고려의 모습과, 이에 맞서 나라를 바로 세우려 했던 공민왕의 개혁 이야기를 만나보세요. 아래로 스크롤하여 각 시대의 이야기를 살펴볼 수 있습니다.</p>
+        </section>
+
+        <section id="section1" class="py-16 bg-secondary rounded-lg scroll-mt-20">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center text-title mb-4">1차시: 갑자기 나타난 힘센 짝꿍, 몽골</h3>
+                <p class="text-center max-w-2xl mx-auto mb-12">40년간의 긴 전쟁 끝에, 고려는 몽골(원)과 화해했지만 평등한 관계는 아니었습니다. 마치 힘센 짝꿍이 우리 반의 모든 일에 간섭하는 것처럼, 원나라는 고려의 정치, 경제, 사회 전반에 깊이 개입하기 시작했습니다. 이것이 바로 '원 간섭기'의 시작입니다. 어떤 방식으로 간섭했는지 아래 카드를 클릭해 자세히 알아보세요.</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card bg-primary p-6 rounded-lg shadow-sm" data-detail="detail1">
+                        <h4 class="text-2xl font-bold text-accent mb-2">👑 왕실과 관제 격하</h4>
+                        <p>왕의 명칭을 '충(忠)' 자를 붙여 부르게 하고, 주요 관청의 등급을 낮춰 고려의 위상을 떨어뜨렸습니다.</p>
+                    </div>
+                    <div class="card bg-primary p-6 rounded-lg shadow-sm" data-detail="detail2">
+                        <h4 class="text-2xl font-bold text-accent mb-2">🕵️ 다루가치 파견</h4>
+                        <p>고려의 정치를 감시하기 위해 '다루가치'라는 감시관을 파견하여 모든 일을 간섭했습니다.</p>
+                    </div>
+                    <div class="card bg-primary p-6 rounded-lg shadow-sm" data-detail="detail3">
+                        <h4 class="text-2xl font-bold text-accent mb-2">💸 공물과 공녀 요구</h4>
+                        <p>금, 은, 인삼 등 막대한 양의 물품과 고려 여인들을 공녀로 요구하여 백성들의 고통이 매우 컸습니다.</p>
+                    </div>
+                     <div class="card bg-primary p-6 rounded-lg shadow-sm" data-detail="detail4">
+                        <h4 class="text-2xl font-bold text-accent mb-2">🗺️ 영토 상실</h4>
+                        <p>철령 이북의 땅(쌍성총관부)과 서경(동녕부), 제주도(탐라총관부)를 빼앗아 직접 다스렸습니다.</p>
+                    </div>
+                </div>
+                <div id="detail-display" class="mt-8 p-6 bg-primary rounded-lg shadow-inner text-center hidden min-h-[100px] flex items-center justify-center">
+                    <p class="text-lg">카드를 클릭하면 여기에 자세한 설명이 나타납니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2" class="py-16 scroll-mt-20">
+             <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center text-title mb-4">2차시: 짝꿍 편만 드는 애들, 권문세족</h3>
+                <p class="text-center max-w-2xl mx-auto mb-12">원나라라는 강력한 '빽'이 생기자, 이에 빌붙어 막대한 권력을 누리는 세력이 나타났습니다. 바로 '권문세족'입니다. 그들은 친원적인 행보로 부와 권력을 쌓았고, 그 과정에서 수많은 백성들은 삶의 터전을 잃고 고통받았습니다.</p>
+                
+                <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+                    <div class="mb-8 md:mb-0">
+                        <h4 class="text-2xl font-bold text-accent mb-4 text-center">권문세족의 성장 🌱</h4>
+                        <ul class="space-y-3 list-disc list-inside bg-secondary p-6 rounded-lg">
+                            <li><strong>친원파:</strong> 몽골어에 능통하거나 원 황실과 혼인 관계를 맺어 권력을 잡았습니다.</li>
+                            <li><strong>대농장 소유:</strong> 권력을 이용해 백성들의 토지를 강제로 빼앗아 거대한 농장을 만들었습니다.</li>
+                            <li><strong>국가 재정 악화:</strong> 세금을 내지 않고 나라의 재정을 어렵게 만들었습니다.</li>
+                            <li><strong>몽골풍 유행 선도:</strong> 몽골식 의복(호복)과 머리 모양(변발)을 즐기며 문화를 주도했습니다.</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h4 class="text-2xl font-bold text-accent mb-4 text-center">권문세족의 횡포와 백성의 삶 🌾</h4>
+                        <div class="chart-container">
+                            <canvas id="landChart"></canvas>
+                        </div>
+                        <p class="text-center mt-2 text-sm text-gray-600">권문세족이 대부분의 토지를 소유하며 백성들은 더욱 가난해졌습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3" class="py-16 bg-secondary rounded-lg scroll-mt-20">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center text-title mb-4">3차시: "이제 그만!" 공민왕의 반격</h3>
+                <p class="text-center max-w-2xl mx-auto mb-12">계속되는 원의 간섭과 권문세족의 횡포 속에서, 고려의 자주성을 되찾고 나라를 바로 세우려는 위대한 군주가 등장합니다. 바로 공민왕입니다. 그는 마치 혼란에 빠진 반을 바로잡으려는 새로운 반장처럼, 과감한 개혁을 시작했습니다.</p>
+
+                <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+                    <div class="mb-8 md:mb-0">
+                        <h4 class="text-2xl font-bold text-accent mb-6 text-center">공민왕의 개혁 미션 🔥</h4>
+                        <div class="relative border-l-2 border-accent ml-4 pl-8 space-y-10">
+                            <div class="timeline-item">
+                                <h5 class="font-bold text-lg">미션 1: 친원 세력 숙청</h5>
+                                <p>권문세족의 핵심 인물인 기철 일당을 제거하여 개혁의 시작을 알렸습니다.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5 class="font-bold text-lg">미션 2: 몽골풍 폐지와 관제 복구</h5>
+                                <p>변발 등 몽골 풍습을 금지하고, 격하되었던 관청의 이름을 원래대로 되돌렸습니다.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5 class="font-bold text-lg">미션 3: 영토 회복</h5>
+                                <p>군대를 보내 원에게 빼앗겼던 쌍성총관부를 되찾아 영토를 회복했습니다.</p>
+                            </div>
+                            <div class="timeline-item">
+                                 <h5 class="font-bold text-lg">미션 4: 전민변정도감 설치</h5>
+                                <p>신돈을 등용하여 권문세족이 빼앗은 토지와 노비를 원래 주인에게 돌려주려 했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div>
+                        <h4 class="text-2xl font-bold text-accent mb-4 text-center">개혁의 성과와 한계 ⚖️</h4>
+                        <div class="chart-container">
+                            <canvas id="reformChart"></canvas>
+                        </div>
+                        <p class="text-center mt-2 text-sm text-gray-600">차트의 각 부분을 클릭하여 개혁의 성공 요인과 실패 요인을 확인해보세요.</p>
+                        <div id="reform-detail" class="mt-4 p-4 bg-primary rounded-lg shadow-inner text-center hidden min-h-[80px] flex items-center justify-center">
+                            <p>차트를 클릭하면 상세 내용이 표시됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center py-6 mt-12 border-t border-gray-200">
+        <p class="text-sm text-gray-500">&copy; 2025 인터랙티브 역사 학습. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
